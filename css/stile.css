@@ -97,17 +97,25 @@ body {
 .nav-adres .item + .item {
   margin-left: 50px;
 }
-
+.svg-fone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+}
 .nav-adres-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
+
   color: var(--alt-text-cl);
 }
 .nav-adres-link:hover {
@@ -117,7 +125,16 @@ body {
 /*Герой*/
 
 .hiro-bk {
-  background-color: var(--dark-bg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imags/fons-hiro/hero-bg.jpg);
+  background-repeat: no-repeat;
+
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .hiro-bk .container {
   display: flex;
@@ -303,13 +320,14 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  fill: rgba(175, 177, 184, 1);
   background-color: var(--alt-title-cl);
 }
 .team-icons-svg {
   width: 20px;
   height: 20px;
-  fill: var(--alt-text-cl);
 }
+
 .team-icon-link:hover {
   fill: var(--alt-title-cl);
   background-color: var(--accent-cl);
@@ -430,7 +448,7 @@ body {
 .footer-title {
   display: block;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   color: var(--alt-title-cl);
 }
@@ -449,7 +467,8 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--alt-text-cl);
+
+  background-color: rgba(68, 69, 78, 1);
 }
 .footer-icon-item:not(:last-child) {
   margin-right: 10px;

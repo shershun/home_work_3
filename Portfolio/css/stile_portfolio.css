@@ -102,26 +102,33 @@ header {
   margin-left: auto;
 }
 .nav-adres .item + .item {
-  margin-left: 50px;
+  margin-left: 42px;
+}
+.svg-fone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
 }
 
 .nav-adres-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
+
   color: var(--alt-text-cl);
 }
 .nav-adres-link:hover {
   color: var(--accent-cl);
 }
-.nav-adres-link :hover {
-  color: var(--accent-cl);
 }
 /*портфолио*/
 .portfplio {
@@ -268,7 +275,7 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--alt-text-cl);
+  background-color: rgba(68, 69, 78, 1);
 }
 .footer-icon-item:not(:last-child) {
   margin-right: 10px;
