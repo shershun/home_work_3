@@ -462,7 +462,7 @@ footer {
 }
 .footer-adres {
   display: block;
-  margin: 0px;
+  margin: 20px 0px 0px 0px;
   font-style: normal;
   font-size: 14px;
   color: var(--alt-title-cl);
