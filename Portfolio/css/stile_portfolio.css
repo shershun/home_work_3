@@ -22,6 +22,7 @@ img {
   height: auto;
 }
 body {
+  padding-top: 80px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -43,12 +44,15 @@ body {
 }
 header {
   border-bottom: 1px solid #ececec;
+  position: fixed;
+  min-width: 80px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: var(--alt-title-cl);
+  z-index: 3;
 }
 
-.container {
-  width: 1170px;
-  margin: 0 auto;
-}
 .container_Flex {
   display: flex;
   align-items: center;
@@ -87,8 +91,22 @@ header {
   color: var(--accent-cl);
 }
 .nav-link.nav-link-akcent {
+  display: block;
   color: var(--accent-cl);
+  position: relative;
 }
+.nav-link.nav-link-akcent::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-cl);
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
 .nav-link {
   display: block;
   padding-top: 32px;
@@ -134,13 +152,15 @@ header {
   color: var(--accent-cl);
 }
 /*портфолио*/
+.portfplio-box {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .portfplio-conteiner {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .portfplio-nav {
   margin: 0px 0px 50px 0px;
@@ -148,7 +168,6 @@ header {
   display: flex;
   justify-content: center;
   padding: 0px;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -165,10 +184,7 @@ header {
   color: var(--alt-title-cl);
   background-color: var(--accent-cl);
 }
-.link-nav.link-akcent {
-  color: var(--alt-title-cl);
-  background-color: var(--accent-cl);
-}
+
 .item {
   margin-right: 8px;
 }
@@ -185,24 +201,51 @@ header {
   margin-top: calc(-1 * 30px);
   list-style: none;
 }
-
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.portfolio-thumb::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.portfolio-decript {
+  position: absolute;
+  display: flex;
+  min-width: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--alt-title-cl);
+  opacity: 0;
+}
 .examples-box {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
-  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
-    0px 2px 1px rgb(0 0 0 / 20%);
-  border-radius: 0px 0px 4px 4px;
+  position: relative;
+  border: 1px solid #eeeeee;
 }
-
+.examples-box:hover {
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
+}
+.text-box {
+  padding: 20px 24px 20px 24px;
+}
 .examples-title {
   display: block;
   margin: 0px;
 
-  padding-top: 20px;
   padding-right: auto;
-  padding-bottom: 4px;
-  padding-left: 24px;
+  margin-bottom: 4px;
 
   font-size: bold;
   font-size: 18px;
@@ -212,8 +255,7 @@ header {
 .text {
   display: block;
   margin: 0px;
-  padding-left: 24px;
-  padding-bottom: 20px;
+
   color: var(--alt-text-cl);
 }
 /*Футер*/
@@ -221,21 +263,30 @@ footer {
   background-color: var(--dark-bg);
 }
 
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .footer-container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.footer-box {
   display: flex;
 }
+
 .logo-footer {
   display: block;
-  padding-bottom: 20px;
+  font-family: Raleway;
+  width: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
   color: var(--alt-title-cl);
+}
+.logo-web-footer {
+  color: var(--accent-cl);
 }
 .footer-adres {
   display: block;
@@ -245,25 +296,25 @@ footer {
   color: var(--alt-title-cl);
 }
 .footer-adres-item {
-  padding-right: 70px;
+  margin-right: 70px;
 }
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-item {
   display: block;
-  padding-top: 9px;
+  margin-top: 9px;
 }
 .footer-title {
   display: block;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
   color: var(--alt-title-cl);
 }
 .footer-icon {
-  margin: 0px;
-  padding: 10px 0px 0px 0px;
+  margin-top: 10px;
+  padding: 0px;
   list-style: none;
   display: inline-flex;
 }
