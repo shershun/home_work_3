@@ -53,7 +53,7 @@
         <section class="hiro-bk">
             <div class="hiro-container"></div>
             <h1 class="hiro-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="hiro-button">Заказать услугу</button>
+            <button type="button" class="hiro-button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -108,12 +108,22 @@
                 <h2 class="wedoing-title ">Чем мы занимаемся</h2>
                 <ul class="list wedoing-list">
                     <li class="wedoing-img"><img src="./imags/what-are-we-doing/img-1.jpg" width="370" height="294"
-                            alt="Работа за планшетом с клавиатурой"></li>
+                            alt="Работа за планшетом с клавиатурой">
+                        <div class="wedoing-text">
+                            <h3 class="wedoing-title-insaid">десктопные приложения</h3>
+                        </div>
+                    </li>
                     <li class="wedoing-img"><img src="./imags/what-are-we-doing/img-2.jpg" width="370" height="294"
                             alt="Работа за ноутбуком">
+                        <div class="wedoing-text">
+                            <h3 class="wedoing-title-insaid">десктопные приложения</h3>
+                        </div>
                     </li>
                     <li class="wedoing-img"><img src="./imags/what-are-we-doing/img-3.jpg" width="370" height="294"
                             alt="Рисование на планшете">
+                        <div class="wedoing-text">
+                            <h3 class="wedoing-title-insaid">десктопные приложения</h3>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -296,16 +306,6 @@
                 </ul>
             </div>
         </section>
-        <!--мадальное окно-->
-        <div class="backdrop is-hidden">
-            <div class="kontakt-madal">
-                <button class="button-madal">
-                    <svg class="madal-svg">
-                        <use href="./imags/svg/sprite.svg#icon-linkedin"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
 
     </main>
     <!--Футер-->
@@ -355,7 +355,20 @@
                 </ul>
             </div>
         </div>
-
+        <!--мадальное окно-->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-button" data-modal-close>
+                    <svg class="icon-close-button">
+                        <use href="./imags/svg/sprite.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+                <div class="input-text">
+                    <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
+                </div>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
 </body>
 
 </html>
