@@ -82,6 +82,7 @@ header {
   bottom: 0;
   border-radius: 2px;
 }
+
 .site-nav .item {
   margin-right: 50px;
 }
@@ -115,10 +116,13 @@ header {
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-text-cl);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-cl);
 }
+
 .nav-adres {
   display: flex;
   margin-left: auto;
@@ -146,8 +150,10 @@ header {
   line-height: 1.15;
 
   color: var(--alt-text-cl);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-adres-link:hover {
+.nav-adres-link:hover,
+.nav-adres-link:focus {
   color: var(--accent-cl);
 }
 
@@ -204,6 +210,10 @@ header {
   letter-spacing: 0.06em;
   color: var(--alt-title-cl);
   background-color: var(--accent-cl);
+}
+.hiro-button:focus,
+.hiro-button:hover {
+  cursor: pointer;
 }
 
 /*Технологии*/
@@ -346,16 +356,21 @@ header {
   border-radius: 50%;
   fill: rgba(175, 177, 184, 1);
   background-color: var(--alt-title-cl);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icons-svg {
   width: 20px;
   height: 20px;
 }
 
-.team-icon-link:hover {
+.team-icon-link:hover,
+.team-icon-link:focus {
   fill: var(--alt-title-cl);
   background-color: var(--accent-cl);
 }
+
 .team-icon-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -419,13 +434,15 @@ header {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-svg {
   width: 106px;
   height: 60px;
   fill: currentColor;
 }
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
   color: #2196f3;
   border: 1px solid #2196f3;
 }
@@ -461,8 +478,8 @@ footer {
   color: var(--accent-cl);
 }
 .footer-adres {
+  margin-top: 20px;
   display: block;
-  margin: 20px 0px 0px 0px;
   font-style: normal;
   font-size: 14px;
   color: var(--alt-title-cl);
@@ -472,6 +489,11 @@ footer {
 }
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-cl);
 }
 .footer-item {
   display: block;
@@ -509,8 +531,10 @@ footer {
   height: 20px;
   fill: var(--alt-title-cl);
 }
-.footer-icon-link:hover {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   background-color: var(--accent-cl);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*мадальное окно*/
